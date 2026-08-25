@@ -1,0 +1,7 @@
+control_area,control_id,statement_summary,verification,owner
+Identities,VER-ID-01,Two execution roles; no cross-application assumption,PR review by Compliance Engineering,Compliance Engineering
+Immutability,VER-IM-01,Archive bucket Object Lock COMPLIANCE mode 10-year retention,Quarterly bucket configuration audit,Platform Engineering
+Encryption,VER-EN-01,Single customer-managed KMS key across all data stores,Terraform plan review,Platform Engineering
+Encryption,VER-EN-02,TLS 1.2 or higher in transit; SSL-only bucket policy,Terraform plan review,Platform Engineering
+Audit Trail,VER-AU-01,CloudTrail to a dedicated audit bucket retained 7 years,Quarterly bucket configuration audit,Platform Engineering
+Alerting,VER-AL-01,Both dead-letter-queue depth alarms defined in Terraform,Terraform plan review,Platform Engineering
