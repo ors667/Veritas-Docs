@@ -263,8 +263,8 @@ kubectl create secret generic veritas-aurora-secret \
 helm upgrade --install veritas ./helm \
   --namespace veritas \
   --set ingestor.env[0].value=$(terraform output -raw trade_events_queue_url) \
-  --set ingestor.serviceAccount.annotations."eks.amazonaws.com/role-arn"=$(terraform output -raw ingestor_role_arn) \
-  --set reporter.serviceAccount.annotations."eks.amazonaws.com/role-arn"=$(terraform output -raw reporter_role_arn) \
+  --set ingestor.serviceAccount.annotations."eks\.amazonaws\.com/role-arn"=$(terraform output -raw ingestor_role_arn) \
+  --set reporter.serviceAccount.annotations."eks\.amazonaws\.com/role-arn"=$(terraform output -raw reporter_role_arn) \
   --set reporter.env[2].value=$(terraform output -raw regulatory_archive_bucket)
 
 ```
